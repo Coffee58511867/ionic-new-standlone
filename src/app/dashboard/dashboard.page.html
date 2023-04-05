@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">Items</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar
+  animated="true"
+  placeholder="Enter Item Name "
+  showCancelButton="focus"
+  [(ngModel)]="searchItem"
+  style="position: fixed; z-index: 999;"
+></ion-searchbar>
+  <ion-grid style="margin-top: 60px;">
+    <ion-row class="ion-text-center">
+      <ion-col routerLink="/add-booking"  *ngFor="let itm of Items | filter:searchItem" size="6">
+        <ion-card
+          style="height: 120px; text-align: center; border-radius: 8px;"
+        >
+          <ion-icon
+            style="margin-top: 20px"
+            name="bag-add"
+            color="danger"
+            size="large"
+          ></ion-icon>
+          <p>{{itm.itemName}}</p>
+          <p>M{{itm.amount}}</p>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    </ion-grid>
+</ion-content>
