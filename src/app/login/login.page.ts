@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import {RouterModule} from '@angular/router';
+import { AuthService } from '../Services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -20,6 +21,7 @@ export class LoginPage implements OnInit {
   constructor(public fireAuth : AngularFireAuth,
     public formBuilder:  FormBuilder,
     public router: Router,
+    public authService: AuthService,
     ) { }
 
   ngOnInit() {
