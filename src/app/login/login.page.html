@@ -13,12 +13,11 @@
 <ion-content>
   <form [formGroup]="Register" (ngSubmit)="login(email.value, password.value)">
   <ion-item fill="outline" style="margin-top: 40%;">
-    <ion-label position="floating">Email Address</ion-label>
-    <ion-input placeholder="Enter your email address" formControlName="email" #email></ion-input>
+    <ion-input placeholder="Enter your email address"  label="Email Address"
+     label-placement="floating" formControlName="email" #email></ion-input>
   </ion-item>
   <ion-item fill="outline">
-    <ion-label position="floating">Password</ion-label>
-    <ion-input placeholder="Enter your password" formControlName="password" #password></ion-input>
+    <ion-input placeholder="Enter your password" formControlName="password" #password  label="Password" label-placement="floating"></ion-input>
   </ion-item>
   <ion-button
   type="Submit"
