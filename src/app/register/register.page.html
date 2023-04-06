@@ -1,13 +1,37 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>register</ion-title>
+    <ion-title style="text-align: center;">Create an Account</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+  </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">register</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" >
+  <form [formGroup]="Register" (ngSubmit)="register(email.value, password.value)">
+  <ion-item fill="outline" style="margin-top: 40%;">
+    <ion-label position="floating">Full Names</ion-label>
+    <ion-input placeholder="Enter your full name" formControlName="names"></ion-input>
+  </ion-item>
+  <ion-item fill="outline">
+    <ion-label position="floating">Email Address</ion-label>
+    <ion-input placeholder="Enter your email address" formControlName="email" #email type="email"></ion-input>
+  </ion-item>
+  <ion-item fill="outline">
+    <ion-label position="floating">Phone Number</ion-label>
+    <ion-input placeholder="Enter your phone number" formControlName="phoneNumber" type="number"></ion-input>
+  </ion-item>
+  <ion-item fill="outline">
+    <ion-label position="floating">Location</ion-label>
+    <ion-input placeholder="Enter your location" formControlName="location" type="text"></ion-input>
+  </ion-item>
+  <ion-item fill="outline">
+    <ion-label position="floating">Password</ion-label>
+    <ion-input placeholder="Enter your password" formControlName="password" #password></ion-input>
+  </ion-item>
+  <ion-button expand="block" color="danger" style="margin-top: 20px; margin-left: 20px;margin-right: 20px;"
+  type="Submit"
+  >Submit</ion-button>
+</form>
 </ion-content>
+Footer
