@@ -32,7 +32,7 @@ export class LoginPage implements OnInit {
   }
 
   login(email: any, password: any){
-   this.fireAuth.signInWithEmailAndPassword(email,password)
+   this.authService.SignIn(email,password)
    .then((res)=> {
     if(res.user){
       console.log(res.user);
