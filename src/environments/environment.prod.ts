@@ -1,12 +1,12 @@
 export const environment = {
   production: true,
   firebaseConfig :{
-    apiKey: "AIzaSyAVwqhOV58cBh2Wa-ejslRU0KXzU-NfFwU",
-    authDomain: "education-9c6e2.firebaseapp.com",
-    projectId: "education-9c6e2",
-    storageBucket: "education-9c6e2.appspot.com",
-    messagingSenderId: "727417058532",
-    appId: "1:727417058532:web:9d0c044f3e1a185d9568f1",
-    measurementId: "G-5JKXXDCFFR"
+    apiKey: "AIzaSyD2oYqAhKRCWbTs4vtSrZdV6FTC3h1MMAU",
+    authDomain: "ionic-new-standalone.firebaseapp.com",
+    projectId: "ionic-new-standalone",
+    storageBucket: "ionic-new-standalone.appspot.com",
+    messagingSenderId: "456571908021",
+    appId: "1:456571908021:web:f5256b3fc9f31dd2d433fc",
+    measurementId: "G-3NDVHHZPQM"
   },
 };
