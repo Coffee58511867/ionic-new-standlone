@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="text-align: center;">View Bookings</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-title style="margin-top: 20px">Bookings</ion-title>
+  <ion-list class="ios list-ios hydrated">
+    <ion-item *ngFor="let bk of bookings" class="user-list">
+      <ion-label>
+        <h5>
+          <ion-icon name="alert-circle-sharp"></ion-icon> {{bk.name}}
+        </h5>
+        <p>
+          <ion-icon name="calendar-number-sharp"></ion-icon> {{bk.date}}
+        </p>
+        <p>
+          <ion-icon name="calendar-number-sharp"></ion-icon> {{bk.phoneNumbers}}
+        </p>
+      </ion-label>
+
+      <div class="item-note" item-end>
+        <button ion-button clear (click)="deleteBooking(bk.id)">
+          <ion-icon name="trash" style="zoom: 2; color: red"></ion-icon>
+        </button>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

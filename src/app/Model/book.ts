@@ -1,6 +1,6 @@
 export default interface Book {
   id ?: string;
-  Name : string;
+  name : string;
   date : Date;
   phoneNumbers : string;
 }
