@@ -1,22 +1,39 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>book</ion-title>
+    <ion-title>Book</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
- <form [formGroup]="Submit" (ngSubmit)="submit()">
-  <ion-list>
-  <ion-item>
-    <ion-input label="Floating label" labelPlacement="floating" placeholder="Enter name" formControlName="name"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input label="Floating label" labelPlacement="floating" placeholder="Enter date of birth" type="date" formControlName="date"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input label="Floating label" labelPlacement="floating" placeholder="Enter phone numbers" formControlName="phoneNumber" type="number" ></ion-input>
-  </ion-item>
-  <ion-button type="submit">Submit</ion-button>
-</ion-list>
- </form>
+  <form [formGroup]="Submit" (ngSubmit)="submit()">
+    <ion-list>
+      <ion-item>
+        <ion-input
+          label="FULL NAMES"
+          labelPlacement="floating"
+          placeholder="Enter name"
+          formControlName="name"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input
+          label="DOB"
+          labelPlacement="floating"
+          placeholder="Enter date of birth"
+          type="date"
+          formControlName="date"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input
+          label="Phone Numbers"
+          labelPlacement="floating"
+          placeholder="Enter phone numbers"
+          formControlName="phoneNumbers"
+          type="number"
+        ></ion-input>
+      </ion-item>
+      <ion-button type="submit" expand="block">Submit</ion-button>
+    </ion-list>
+  </form>
 </ion-content>
