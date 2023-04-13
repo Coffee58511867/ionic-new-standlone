@@ -7,3 +7,5 @@
 
 ##### Adding Firebase or Module with pipes should be added in main.ts together with routes
 ![image](https://user-images.githubusercontent.com/104419049/230303394-89360e79-3afb-4f23-a968-8f14b2521e90.png)
+
+##https://firebase.google.com/docs/firestore/query-data/queries
