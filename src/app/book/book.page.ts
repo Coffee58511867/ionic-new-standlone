@@ -33,6 +33,7 @@ export class BookPage implements OnInit {
       name: ['', Validators.required],
       date: ['', Validators.required],
       country: ['', Validators.required],
+      role: 'Faculty',
       phoneNumbers: ['', [Validators.required, Validators.pattern('[0-9]{8}')]],
     });
   }
