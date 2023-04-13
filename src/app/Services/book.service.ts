@@ -19,8 +19,14 @@ export class BookService {
     getBookings(){
       return this.ngFirestore.collection('NewBookings').snapshotChanges();
     }
-    getTodayBookings(){
-      return this.ngFirestore.collection('NewBookings').ref.where('name', '==', 'HLALELE');
+    getLesothoBookings(){
+      return this.ngFirestore.collection('NewBookings').ref.where('country', '==', 'Lesotho');
+    }
+    getFaculty(){
+      return this.ngFirestore.collection('NewBookings').ref.where('role', '==', 'Faculty');
+    }
+    getDoctors(){
+      return this.ngFirestore.collection('NewBookings').ref.where('role', '==', 'Doctor');
     }
 
     getBooking(id: any){

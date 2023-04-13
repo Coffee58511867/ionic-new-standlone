@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { BookService } from '../Services/book.service';
 import Book from '../Model/book';
+import { Query } from '@angular/fire/firestore';
 
 
 @Component({
@@ -32,7 +33,7 @@ export class ViewBookingsPage implements OnInit {
       });
     });
 
-    this.bookingService.getTodayBookings().onSnapshot((data) => {
+    this.bookingService.getLesothoBookings().onSnapshot((data) => {
       data.forEach((data) => {
         console.log(data.data())
         this.name3 = data.data();
@@ -40,8 +41,24 @@ export class ViewBookingsPage implements OnInit {
         console.log(studentName);
       })
     })
+    this.bookingService.getFaculty().onSnapshot((data) => {
+      data.forEach((data) => {
+        console.log(data.data())
+        this.name3 = data.data();
+        const studentName = this.name3.role;
+        console.log(studentName);
+      })
+    })
+    this.bookingService.getDoctors().onSnapshot((data) => {
+      data.forEach((data) => {
+        console.log(data.data())
+        this.name3 = data.data();
+        const studentName = this.name3.role;
+        console.log(studentName);
+      })
+    })
 
-    this.bookingService.getTodayBookings().onSnapshot((querySnapshot) => {
+    this.bookingService.getLesothoBookings().onSnapshot((querySnapshot) => {
       const data = querySnapshot.docs.map(d => d.data());
        console.log(data);
     })
