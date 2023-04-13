@@ -14,7 +14,9 @@ import {RouterModule} from '@angular/router';
 })
 export class AddNotesPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    public router: Router,
+  ) { }
 
   ngOnInit() {
   }

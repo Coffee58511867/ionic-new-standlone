@@ -15,8 +15,12 @@ import Book from '../Model/book';
 })
 export class ViewBookingsPage implements OnInit {
   bookings!: Book[];
+  booking2! : Book[];
+  name3 : any;
 
-  constructor(public bookingService: BookService) {}
+  constructor(public bookingService: BookService,
+
+    ) {}
 
   ngOnInit() {
     this.bookingService.getBookings().subscribe((res) => {
@@ -27,6 +31,21 @@ export class ViewBookingsPage implements OnInit {
         };
       });
     });
+
+    this.bookingService.getTodayBookings().onSnapshot((data) => {
+      data.forEach((data) => {
+        console.log(data.data())
+        this.name3 = data.data();
+        const studentName = this.name3.name;
+        console.log(studentName);
+      })
+    })
+
+    this.bookingService.getTodayBookings().onSnapshot((querySnapshot) => {
+      const data = querySnapshot.docs.map(d => d.data());
+       console.log(data);
+    })
+
   }
 
   deleteBooking(id: any) {

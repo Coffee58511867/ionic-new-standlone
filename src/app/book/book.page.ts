@@ -32,6 +32,7 @@ export class BookPage implements OnInit {
     this.Submit = this.formBuilder.group({
       name: ['', Validators.required],
       date: ['', Validators.required],
+      country: ['', Validators.required],
       phoneNumbers: ['', [Validators.required, Validators.pattern('[0-9]{8}')]],
     });
   }
